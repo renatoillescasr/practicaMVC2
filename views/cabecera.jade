@@ -1,0 +1,35 @@
+extends inicio
+
+block cabecera
+  // Cabecera y menus navegacion
+  header.container
+    section.container.row
+      figure.col-xs-12.col-sm-2.col-md-2
+        a(href="index")
+          img.logo.img-responsive(src="img/logo2.jpg" alt="logoweb")
+      nav.navbar.menuSesion.col-xs-12.col-sm-10.col-md-10
+        .container-fluid.nav.navbar-nav.navbar-right
+          a#registro(href="registro")
+            span.glyphicon.glyphicon-list-alt  Registrate
+          a#iniciosesion(href="iniciosesion")
+            span.glyphicon.glyphicon-user  Iniciar Sesion
+          a#carrito(href="micarrito")
+            span.glyphicon.glyphicon-shopping-cart  Mi Carrito
+    // Menu de navegacion por la pagina
+    nav.navbar.navbar-inverse.menuClientes.row
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle(type="button" data-toggle="collapse" data-target="#myNavbar")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        .collapse.navbar-collapse#myNavbar
+          ul.nav.navbar-nav.menuNavegacion
+            li
+              a(href="index") Inicio
+            li.active
+              a(href="catalogo") Catalogo
+            li
+              a(href="tiendas") Tiendas
+            li
+              a(href="contacto") Contacto
